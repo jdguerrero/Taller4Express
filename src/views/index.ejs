@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('partials/header') %>
+    <title>Home</title>
+</head>
+<body>
+
+    <%- include('partials/navigation') %>
+    
+    <div class="container">
+        <div class="row">
+            <% users.forEach(function(user){ %>
+                <div class="col-md-6">
+                    <div class="card">
+
+                        <div class="card-header">
+                            <h2><%= user.nombre %> <%= user.apellido %></h2>
+                        </div>
+    
+                        <div class="card-body">
+                            <h3><%= user.edad %></h3>
+                            <h3><%= user.carrera %></h3>
+                        </div>
+
+                        <div class="card-footer">
+                            <a href="/delete/<%= user.idUser%>" class="btn btn-danger"> Eliminar</button>
+                            </a>
+    
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('partials/header') %>
+    <title>newUser</title>
+</head>
+<body>
+
+    <%- include('partials/navigation') %>
+
+    <div class="container p-4">
+        <form method="POST" action="/newUser" class="card card-body">
+
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese su nombre" autofocus required>
+
+                <br>
+
+                <label for="apellido">Apellido:</label>
+                <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Ingrese su apellido" autofocus required>
+
+                <br>
+
+                <label for="edad">Edad:</label>
+                <input type="number" min="1" max="100" class="form-control" name="edad" id="edad" placeholder="Ingrese su edad" autofocus required>
+
+                <br>
+
+                <label for="carrera">Carrera:</label>
+                <input type="text" class="form-control" name="carrera" id="carrera" placeholder="Ingrese su carrera" autofocus required>
+            </div>
+
+            <input type="submit" value="Save User" class="btn btn-primary">
+
+        </form>
+    </div>
+</body>
+</html>
